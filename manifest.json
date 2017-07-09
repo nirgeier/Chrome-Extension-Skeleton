@@ -1,0 +1,35 @@
+{
+  "name": "Chrome Extensiton Skelton",
+  "author": "Nir Geier",
+  "version": "0.001",
+  "description": "Skelton for building chrome extension",
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": ["<all_urls>"]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "downloads",
+    "background",
+    "webRequest",
+    "<all_urls>"
+  ],
+  "content_scripts": [{
+    "run_at": "document_idle",
+    "matches": ["<all_urls>"],
+    "js": ["js/script.js", "js/inject.js"],
+    "css": ["css/style.css"]
+  }],
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [
+    "*.js",
+    "*.css"
+  ]
+}
