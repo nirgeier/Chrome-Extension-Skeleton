@@ -1,5 +1,8 @@
+https://github.com/nirgeier/Chrome-Extension-Skeleton
+
 Chrome-Extension-Skeleton
 =========================
+
 
 This project is a skeltom for creating Chrome Extensions.
 
